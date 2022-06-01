@@ -70,3 +70,8 @@ func (ws *WriterSeeker) Close() error {
 func (ws *WriterSeeker) BytesReader() *bytes.Reader {
 	return bytes.NewReader(ws.buf.Bytes())
 }
+
+// Bytes returns the underlying byte slice.
+func (ws *WriterSeeker) Bytes() []byte {
+	return ws.buf.Bytes()
+}
